@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anand vs Vinodha</title>
+    
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="bower_components/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="Css/style.css" rel="stylesheet" type="text/css"/> 
+ </head>
+<body>
+    <section class='background-img'>
+    <section class='container-fluid'>
+        <section class="row home_bckgrnd content">
+            <section class="time col-lg-10 text-right h4">
+                Time: 06:00
+            </section>
+            <section class='calendar col-lg-10 '>
+                <table class="table table-bordered">
+   <caption>Oct'15</caption>
+   <thead>
+      <tr>
+         <th>Sun</th>
+         <th>Mon</th>
+         <th>Tue</th>
+          <th>Wed</th>
+         <th>Thu</th>
+         <th>Fri</th>
+          <th>Sat</th>
+      </tr>
+   </thead>
+<tbody> <tr>
+         <td></td>
+         <td>1</td>
+         <td>2</td>
+
+         <td>3</td>
+         <td>4</td>
+         <td>5</td>
+             <td>6</td>
+</tr> <tr>
+         <td>7</td>
+         <td>8</td>
+         <td>9</td>
+
+         <td>10</td>
+         <td>11</td>
+         <td>12</td>
+             <td>6</td>
+      </tr>
+   </tbody>
+</table>
+            </section>
+        </section>
+        
+    <footer class='row '>
+        
+        <nav class="hidden-xs col-lg-12 text-center">
+            <ul>
+                <li class="read current">
+                  <a href="#Home"> <i class="fa fa-heartbeat"></i>  <label >Home</label></a>
+                </li>
+                <li class="">
+                  <a href="#Story"> <i class="fa fa-heart-o"></i>  <label >Our Story</label></a>
+                </li>
+                <li class="">
+                  <a href="#Photos" > <i class="fa fa-heart-o"></i>  <label >Photos</label></a>
+                </li>
+                <li class="">
+                  <a href="#Vidoes" > <i class="fa fa-heart-o"></i>  <label >Vidoes</label></a>
+                </li>
+                <li class="">
+                  <a href="#event" > <i class="fa fa-heart-o"></i>  <label >Event</label></a>
+                </li>
+                <li class="">
+                  <a href="#contactus" > <i class="fa fa-heart-o"></i>  <label >Contactus</label></a>
+                </li>
+            </ul>
+        </nav>
+            
+    </footer>
+        </section>
+        </section>
+<script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    
+    $(document).ready(function(){
+        
+        $('footer.row ul li').click(function(e){
+            $('footer.row ul li').removeClass("current");
+            $('footer.row ul li i').removeClass("fa-heartbeat ");
+            $(this).addClass("current");
+            $(this).find("i").removeClass("fa-heart-o");
+            $(this).find("i").addClass("fa-heart fa-heartbeat ");
+            if(!$(this).hasClass("read")){
+                $(this).addClass("read")
+            }
+            e.stopPropagation();
+        });
+        
+        $('footer.row ul li').mouseover(function(e){
+           
+           $('footer.row ul li').find("i").removeClass("fa-heartbeat"); 
+            $('footer.row ul li.current').find("i").addClass("fa-heartbeat");
+           $(this).find("i").addClass("fa-heart fa-heartbeat ");
+        });
+           
+       
+        });
+    </script>
+    </body>
+</html>
