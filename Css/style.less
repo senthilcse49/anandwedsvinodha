@@ -63,3 +63,20 @@ footer ul li.read a{
     padding-top:20px;
 }
 
+.decorator{
+    top:0px;
+    position:absolute;
+    font-size: 100%;
+    animation: example 5s 1;
+    opacity:0.2;
+}
+.decorator i{
+    color:red;
+}
+
+
+@keyframes example {
+    0%   {top:25%;opacity:0.2}
+    90% {top:90%;opacity:1}
+    100% {opacity:0;top:97%;}
+}
