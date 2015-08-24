@@ -5,18 +5,34 @@
     
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="bower_components/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Pacifico">
     <link href="Css/style.css" rel="stylesheet" type="text/css"/> 
  </head>
 <body>
     <section class='background-img'>
     <section class='container-fluid'>
         <section class="row home_bckgrnd content">
-            <section class="time col-lg-10 text-right h4">
-                Time: 06:00
+            <section class='col-lg-4 img'>
+                <img src="images/vinodha.jpg" width="100%" height="100%"/>
+                <section class='cover'></section>
+                <label class='name'>Vinodha</label>
+                <i class="fa fa-plus-circle"></i>
+                
             </section>
-            <section class='calendar col-lg-10 '>
+            <section class='col-lg-offset-4 col-lg-4 img'>
+                <img src="images/anand.jpg" width="100%" height="100%"/>
+                <section class='cover'></section>
+                <label class='name'>Anand</label>
+                <i class="fa fa-plus-circle"></i>
+                
+            </section>
+            <section class="content-text-red col-lg-12 text-center h3">
+            Are getting married</section>
+            <section class="content-text-red col-lg-12 text-center h5">
+            on OCT'15</section>
+            <!--<section class='calendar col-lg-12 '>
                 <table class="table table-bordered">
-   <caption>Oct'15</caption>
+   <caption class='h4'><label>Oct'15</label></caption>
    <thead>
       <tr>
          <th>Sun</th>
@@ -28,15 +44,15 @@
           <th>Sat</th>
       </tr>
    </thead>
-<tbody> <tr>
+<tbody class='calendarTable'> <tr>
          <td></td>
-         <td>1</td>
-         <td>2</td>
+         <td></td>
+         <td></td>
 
          <td>3</td>
-         <td>4</td>
-         <td>5</td>
-             <td>6</td>
+         <td>1</td>
+         <td>2</td>
+             <td>3</td>
 </tr> <tr>
          <td>7</td>
          <td>8</td>
@@ -49,7 +65,7 @@
       </tr>
    </tbody>
 </table>
-            </section>
+            </section>-->
         </section>
         
     <footer class='row '>
@@ -61,6 +77,9 @@
                 </li>
                 <li class="">
                   <a href="#Story"> <i class="fa fa-heart-o"></i>  <label >Our Story</label></a>
+                </li>
+                <li class="">
+                  <a href="#Photos" > <i class="fa fa-heart-o"></i>  <label >Bride</label></a>
                 </li>
                 <li class="">
                   <a href="#Photos" > <i class="fa fa-heart-o"></i>  <label >Photos</label></a>
@@ -85,7 +104,20 @@
     var clrIntrvl;
     $(document).ready(function(){
         var winWidth = $(window).width();
-        var idElem = 0,delElem=0;
+        var idElem = 0,delElem=0,tbElem="";
+       /* for(var i=-3;i<=31;i++){
+            
+            if(i== -3 || i == 4 || i == 11 || i == 18 || i == 25){
+                if(i != -3)
+                    tbElem += "</tr>";    
+                tbElem += "<tr>";
+            }
+            if(i >0)
+                tbElem += "<td>"+i+"</td>";
+            else
+                tbElem += "<td></td>";
+        }
+        $('.calendarTable').html(tbElem);*/
         //alert(winWidth);
         $('footer.row ul li').click(function(e){
             $('footer.row ul li').removeClass("current");
@@ -119,7 +151,7 @@
                },4500);
                idElem++;
                
-           },1000);
+           },2000);
        
         });
     </script>
