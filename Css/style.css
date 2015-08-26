@@ -378,7 +378,7 @@ a {
 .background-img {
   width: 100%;
   height: 100vh;
-  background-image: url('../images/IMG_3.jpg');
+  background-image: url('../images/IMG_2.jpg');
   background-size: 100% 100%;
   background-position: 100% 100%;
 }
@@ -401,7 +401,7 @@ footer ul li.current a {
   color: red;
 }
 .content {
-  height: 45%;
+  height: 35%;
   top: 30%;
   left: 15%;
   width: 70%;
@@ -458,7 +458,7 @@ footer ul li.current a {
 .img img {
   height: 100%;
   width: auto;
-  border: 1px solid white;
+  transform: rotate(-20deg);
 }
 .img .desc {
   bottom: 2%;
@@ -471,7 +471,6 @@ footer ul li.current a {
 .img .cover {
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.4);
   position: absolute;
   top: 0px;
   left: 0px;
@@ -480,11 +479,10 @@ footer ul li.current a {
   margin-top: 10%;
   color: #1f3a93;
 }
-.vinodhaImg,
-.anandImg {
-  opacity: 0;
-  -webkit-transition: opacity 6s ease-in-out;
-  transition: opacity 6s ease-in-out;
+img.anandImg {
+  transform: rotate(40deg);
+  margin-top: -70px;
+  margin-left: 70px;
 }
 .opImg {
   opacity: 1;
