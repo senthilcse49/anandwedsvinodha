@@ -11,6 +11,9 @@ width:100%;
     color:@base-font-color;
     overflow:hidden;
 }
+a{
+    color:@base-font-color;
+}
 .container-fluid{
     background:rgba(255,255,255,0.4);
     height:100vh;
@@ -25,7 +28,7 @@ width:100%;
 
 footer{
     position:fixed;
-    bottom:0px;
+    top:10px;
     left:0px;
     height:50px;
     width:100%;
@@ -36,7 +39,7 @@ footer ul{
 }
 footer ul li{
     display: inline-block;
-    font-size: 130%;
+    font-size: 110%;
     margin-left:5%;
 }
 footer ul li.read a{
@@ -47,8 +50,8 @@ footer ul li.read a{
 
 
 .content{
-    height:calc(100% - 40%);
-    top:20%;
+    height:45%;
+    top:30%;
     left:15%;
     width:70%;
     position:absolute;
@@ -84,27 +87,34 @@ footer ul li.read a{
 
 
 .img {
-    position: relative;
+    .rel{
+        position: relative;
+        height:100%;
+        width:auto;
+    }
     padding:0px;
-    
+    height:100%;
     .name{
         top:5%;
-        left:10%;
-        color:#337ab7;
+        left:5%;
+        color:@base-font-color;
         position:absolute;   
         padding-bottom:4px;
-        border-bottom:1px solid #337ab7;
+        
     }
     
     img{
-        
+        height:100%;
+        width:auto;
         border:1px solid white;    
     }
     
-    i{
-        top:5%;
-        right:10%;
-        color:#337ab7;
+    .desc{
+        bottom:2%;
+        left:5%;
+        i{
+            color:@base-font-color;
+        }
         position:absolute;           
     }
     .cover{
@@ -114,14 +124,23 @@ footer ul li.read a{
         position:absolute;
         top:0px;
         left:0px;
-        &:hover{
-            background-color:transparent;
-        }
+        
 
     }
             
 }
 
-.content-text-red{
-    color:red;
+.content-text{
+    margin-top:10%;
+    color:@base-font-color;
 }
+.andCont{
+    line-height: 100%;
+}
+
+
+
+#Home{
+    display:none;
+}
+
