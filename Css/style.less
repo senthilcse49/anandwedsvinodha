@@ -13,6 +13,7 @@ width:100%;
 }
 a{
     color:@base-font-color;
+    text-decoration: none;
 }
 .container-fluid{
     background:rgba(255,255,255,0.4);
@@ -42,7 +43,7 @@ footer ul li{
     font-size: 110%;
     margin-left:5%;
 }
-footer ul li.read a{
+footer ul li.current a{
     color:red;
 }
 
@@ -134,13 +135,15 @@ footer ul li.read a{
     margin-top:10%;
     color:@base-font-color;
 }
-.andCont{
-    line-height: 100%;
+.vinodhaImg,.anandImg{
+    opacity:0;
+    -webkit-transition: opacity 6s ease-in-out;
+    transition: opacity 6s ease-in-out;
+}
+
+.opImg{
+    opacity:1;
 }
 
 
-
-#Home{
-    display:none;
-}
 

@@ -369,6 +369,7 @@ body {
 }
 a {
   color: #1f3a93;
+  text-decoration: none;
 }
 .container-fluid {
   background: rgba(255, 255, 255, 0.4);
@@ -396,7 +397,7 @@ footer ul li {
   font-size: 110%;
   margin-left: 5%;
 }
-footer ul li.read a {
+footer ul li.current a {
   color: red;
 }
 .content {
@@ -479,9 +480,12 @@ footer ul li.read a {
   margin-top: 10%;
   color: #1f3a93;
 }
-.andCont {
-  line-height: 100%;
+.vinodhaImg,
+.anandImg {
+  opacity: 0;
+  -webkit-transition: opacity 6s ease-in-out;
+  transition: opacity 6s ease-in-out;
 }
-#Home {
-  display: none;
+.opImg {
+  opacity: 1;
 }
