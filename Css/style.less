@@ -51,10 +51,10 @@ footer ul li.current a{
 
 
 .content{
-    height:35%;
-    top:30%;
-    left:15%;
-    width:70%;
+    height:40%;
+    top:20%;
+    right:5%;
+    width:  70%;
     position:absolute;
    /* border-radius:2%;
     background-color: rgba(0,0,0,0.1);
@@ -65,9 +65,7 @@ footer ul li.current a{
 }
 
 
-.home_bckgrnd{
-    padding-top:20px;
-}
+
 
 .decorator{
     top:0px;
@@ -108,7 +106,7 @@ footer ul li.current a{
         height:100%;
         width:auto;
         
-        transform:rotate(-20deg);
+        transition:transform 3s,margin 3s;
     }
     
     .desc{
@@ -136,14 +134,15 @@ footer ul li.current a{
     margin-top:10%;
     color:@base-font-color;
 }
-img.anandImg{
+img.anandImg.opImg{
+    transform:rotate(-20deg);
+    
+}
+
+img.vinodhaImg.opImg{
     transform:rotate(40deg);
     margin-top:-70px;
     margin-left:70px;
-}
-
-.opImg{
-    opacity:1;
 }
 
 
