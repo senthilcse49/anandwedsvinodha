@@ -389,6 +389,7 @@ a {
   background-image: url('../images/IMG_5.jpg');
   background-size: 100% 100%;
   background-position: 100% 100%;
+  position: fixed;
 }
 footer {
   position: fixed;
@@ -419,6 +420,20 @@ footer ul li.current a {
     
     border:1px solid red;
     border-color:#ccc;/*rgba(255,0,0,0.5);*/
+}
+.storyContent {
+  width: 90%;
+  top: 40%;
+}
+.storyContent.row.no-gutter {
+  margin-left: auto;
+  margin-right: auto;
+}
+.storyContent [class*='col-']:not(:first-child),
+.storyContent [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+  border-bottom: 1px solid black;
 }
 .decorator {
   top: 0px;

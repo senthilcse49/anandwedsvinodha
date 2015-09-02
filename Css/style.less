@@ -32,6 +32,7 @@ a{
     background-image: @base-bckground;
     background-size:100% 100%;
     background-position:100% 100%;
+    position:fixed;
 }
 
 footer{
@@ -72,7 +73,23 @@ footer ul li.current a{
     
 }
 
+.storyContent{
+    width:90%;
+    top:40%;
+   
+    
+    &.row.no-gutter {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+     [class*='col-']:not(:first-child),
+     [class*='col-']:not(:last-child) {
+        padding-right: 0;
+        padding-left: 0;
+         border-bottom: 1px solid black;
+    }
+}
 
 
 .decorator{
