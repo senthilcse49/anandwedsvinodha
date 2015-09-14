@@ -1,0 +1,57 @@
+.storyMenu{
+   
+    height:60%;
+    top:15%;
+    right:2%;
+    
+    width:  90%;
+    position:absolute;
+}
+
+.year {
+    display:none;
+}
+.year.current{
+    display:block;
+}
+#story img{
+    height:15%;
+    width:15%;
+}
+
+#story img.animate{
+    animation: storyAnimation 4s ;
+    
+}
+
+@keyframes storyAnimation{
+
+  0% {
+   opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2,2);
+    filter: blur(2px);
+  }
+    100% {
+     opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1,1);
+    filter: blur(0px);
+  }
+
+}
+#story .sidebar ul{
+    list-style: none;
+    
+    padding: 0px;
+}
+
+#story .sidebar ul li{
+border-left: 4px solid rgba(31,58,147,0.4);
+    padding:5px;
+    margin-bottom:2px;
+}
+#story .sidebar ul li:hover,
+#story .sidebar li.current{
+    border-left: 4px solid rgba(31,58,147,1);
+}

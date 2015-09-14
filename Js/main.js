@@ -56,20 +56,35 @@
            },2000);
        
         });
-
+var loadedMenu = {}
 function fnLoadMenus(loc){
         var menu = "home";
-        $('#container').html("");
+        $('.content').hide();
         switch(loc){
             case "Story":
                 menu = "story";
                 break;
             
         }
-    
-        $.get(menu+".html", function(data){
-            $('#container').html(data);
-            $('.rel').width($('.rel').height());
-        });
+        if(!loadedMenu[menu]){
+            loadedMenu[menu] = 1;
+            $.get(menu+".html", function(data){
+                $('#container').html(data);
+                $('.rel').width($('.rel').height());
+                if(menu === "story"){
+                    //alert($('#story .current img ').get(0))
+                    $('#story .current img ').addClass("animate");   
+                    $('.yearLi').click(function(){
+                       $('.yearLi').removeClass("current")
+                       $(this).addClass("current");
+                        var yearId = $(this).attr("id");
+                        $('#story .year.animate img').removeClass("animate");
+                        $('.year ').removeClass("current");
+                        $('.year.'+yearId).addClass("current").find("img").addClass("animate");
+                    });
+                }
+            });
+        }    
+        
         
 }
