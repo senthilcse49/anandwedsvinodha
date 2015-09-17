@@ -36,11 +36,12 @@ a{
 }
 
 footer{
-    position:fixed;
+    position:absolute;
     top:10px;
     left:0px;
     height:50px;
     width:100%;
+    z-index:120;
 }
 
 footer ul{
@@ -55,6 +56,13 @@ footer ul li.current a{
     color:red;
 }
 
+#links img{
+    width:10%;
+    height:10%;
+    border-radius:5%;
+    padding:2px;
+    border:1px solid white;
+}
 
 
 
@@ -160,16 +168,51 @@ footer ul li.current a{
     color:@base-font-color;
 }
 img.anandImg.opImg{
-    transform:rotate(-15deg);
-    
+  
+    animation:animateAna 5s infinite;
 }
 
 img.vinodhaImg.opImg{
-    transform:rotate(30deg);
+    animation:animateVin 5s infinite;
+    }
+
+@keyframes animateVin{
+    0%{
+        transform:none;
+    margin-top:0px;
+    margin-left:0px;
+
+    }
+    50%{
+        transform:rotate(30deg);
     margin-top:-70px;
     margin-left:70px;
+    
+    }
+     100%{
+        transform:none;
+    margin-top:0px;
+    margin-left:0px;
+
+    }
 }
 
+@keyframes animateAna{
+    0%{
+        transform:none;
+   
+
+    }
+    50%{
+        transform:rotate(-15deg);
+   
+    
+    }
+    100%{
+        transform:none;
+       
+    }
+}
 .shortDetails{
     padding-top:20px;
     .wedDet{
@@ -186,3 +229,17 @@ img.vinodhaImg.opImg{
 }
 
 
+#videos #bgvid{
+       position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}

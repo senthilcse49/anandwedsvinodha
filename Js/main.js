@@ -53,7 +53,7 @@
                },4500);
                idElem++;
                
-           },2000);
+           },1000);
        
         });
 var loadedMenu = {}
@@ -64,7 +64,12 @@ function fnLoadMenus(loc){
             case "Story":
                 menu = "story";
                 break;
-            
+            case "Videos":
+                menu="videos";
+                break;
+            case "Photos":
+                menu ="photos";
+                break;
         }
         if(!loadedMenu[menu]){
             loadedMenu[menu] = 1;
