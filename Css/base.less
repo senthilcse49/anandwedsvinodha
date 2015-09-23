@@ -1,2 +1,67 @@
 @base-bckground: url('../images/IMG_5.jpg');
 @base-font-color:#1F3A93;
+
+
+.transition (@string) {
+	-webkit-transition: @string;
+	-moz-transition:    @string;
+    -o-transition:    @string;
+    -ms-transition:    @string;
+	transition:         @string;
+}
+
+.animate(@string){
+    -webkit-animation: @string;
+    -moz-animation: @string;
+    -o-animation: @string;
+    -ms-animation: @string;
+    animation: @string;
+}
+
+
+
+
+.animateVin(){
+     0%{
+        transform:none;
+    margin-top:0px;
+    margin-left:0px;
+
+    }
+    50%{
+        transform:rotate(30deg);
+    margin-top:-70px;
+    margin-left:70px;
+    
+    }
+     100%{
+        transform:none;
+    margin-top:0px;
+    margin-left:0px;
+
+    }
+}
+
+
+.animateAna(){
+    0%{
+        transform:none;
+   
+
+    }
+    50%{
+        transform:rotate(-15deg);
+   
+    
+    }
+    100%{
+        transform:none;
+       
+    }
+}
+
+.decor(){
+    0%   {top:25%;opacity:0.2}
+    90% {top:90%;opacity:1}
+    100% {opacity:0;top:96%;}
+}

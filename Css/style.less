@@ -104,17 +104,28 @@ footer ul li.current a{
     top:0px;
     position:absolute;
     font-size: 100%;
-    animation: example 5s 1;
+    
+    .animate(decor 5s 1);
     opacity:0.2;
 }
 .decorator i{
     color:red;
 }
 
-@keyframes example {
-    0%   {top:25%;opacity:0.2}
-    90% {top:90%;opacity:1}
-    100% {opacity:0;top:96%;}
+@-webkit-keyframes decor {
+   .decor
+}
+@-moz-keyframes decor {
+   .decor
+}
+@-ms-keyframes decor {
+   .decor
+}
+@-o-keyframes decor {
+   .decor
+}
+@keyframes decor {
+   .decor
 }
 
 
@@ -139,7 +150,7 @@ footer ul li.current a{
         height:100%;
         width:auto;
         
-        transition:transform 3s,margin 3s;
+        .transition(transform 3s,margin 3s;);
     }
     
     .desc{
@@ -168,51 +179,52 @@ footer ul li.current a{
     color:@base-font-color;
 }
 img.anandImg.opImg{
-  
-    animation:animateAna 5s infinite;
+   .animate(animateAna 5s infinite);
+    
 }
 
 img.vinodhaImg.opImg{
-    animation:animateVin 5s infinite;
+    .animate(animateVin 5s infinite);
+    
     }
+
+@-webkit-keyframes animateVin{
+    .animateVin
+}
+
+@-moz-keyframes animateVin{
+   .animateVin
+}
+
+@-o-keyframes animateVin{
+   .animateVin
+}
+
+@-ms-keyframes animateVin{
+   .animateVin
+}
 
 @keyframes animateVin{
-    0%{
-        transform:none;
-    margin-top:0px;
-    margin-left:0px;
-
-    }
-    50%{
-        transform:rotate(30deg);
-    margin-top:-70px;
-    margin-left:70px;
-    
-    }
-     100%{
-        transform:none;
-    margin-top:0px;
-    margin-left:0px;
-
-    }
+   .animateVin
 }
 
+
+@-webkit-keyframes animateAna{
+    .animateAna
+}
+@-moz-keyframes animateAna{
+    .animateAna
+}
+@-o-keyframes animateAna{
+    .animateAna
+}
+@-ms-keyframes animateAna{
+    .animateAna
+}
 @keyframes animateAna{
-    0%{
-        transform:none;
-   
-
-    }
-    50%{
-        transform:rotate(-15deg);
-   
-    
-    }
-    100%{
-        transform:none;
-       
-    }
+    .animateAna
 }
+
 .shortDetails{
     padding-top:20px;
     .wedDet{

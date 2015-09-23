@@ -447,13 +447,73 @@ footer ul li.current a {
   top: 0px;
   position: absolute;
   font-size: 100%;
-  animation: example 5s 1;
+  -webkit-animation: decor 5s 1;
+  -moz-animation: decor 5s 1;
+  -o-animation: decor 5s 1;
+  -ms-animation: decor 5s 1;
+  animation: decor 5s 1;
   opacity: 0.2;
 }
 .decorator i {
   color: red;
 }
-@keyframes example {
+@-webkit-keyframes decor {
+  0% {
+    top: 25%;
+    opacity: 0.2;
+  }
+  90% {
+    top: 90%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 96%;
+  }
+}
+@-moz-keyframes decor {
+  0% {
+    top: 25%;
+    opacity: 0.2;
+  }
+  90% {
+    top: 90%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 96%;
+  }
+}
+@-ms-keyframes decor {
+  0% {
+    top: 25%;
+    opacity: 0.2;
+  }
+  90% {
+    top: 90%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 96%;
+  }
+}
+@-o-keyframes decor {
+  0% {
+    top: 25%;
+    opacity: 0.2;
+  }
+  90% {
+    top: 90%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 96%;
+  }
+}
+@keyframes decor {
   0% {
     top: 25%;
     opacity: 0.2;
@@ -486,7 +546,11 @@ footer ul li.current a {
 .img img {
   height: 100%;
   width: auto;
-  transition: transform 3s,margin 3s;
+  -webkit-transition: transform 3s, margin 3s;
+  -moz-transition: transform 3s, margin 3s;
+  -o-transition: transform 3s, margin 3s;
+  -ms-transition: transform 3s, margin 3s;
+  transition: transform 3s, margin 3s;
 }
 .img .desc {
   bottom: 2%;
@@ -508,10 +572,86 @@ footer ul li.current a {
   color: #1f3a93;
 }
 img.anandImg.opImg {
+  -webkit-animation: animateAna 5s infinite;
+  -moz-animation: animateAna 5s infinite;
+  -o-animation: animateAna 5s infinite;
+  -ms-animation: animateAna 5s infinite;
   animation: animateAna 5s infinite;
 }
 img.vinodhaImg.opImg {
+  -webkit-animation: animateVin 5s infinite;
+  -moz-animation: animateVin 5s infinite;
+  -o-animation: animateVin 5s infinite;
+  -ms-animation: animateVin 5s infinite;
   animation: animateVin 5s infinite;
+}
+@-webkit-keyframes animateVin {
+  0% {
+    transform: none;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  50% {
+    transform: rotate(30deg);
+    margin-top: -70px;
+    margin-left: 70px;
+  }
+  100% {
+    transform: none;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+@-moz-keyframes animateVin {
+  0% {
+    transform: none;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  50% {
+    transform: rotate(30deg);
+    margin-top: -70px;
+    margin-left: 70px;
+  }
+  100% {
+    transform: none;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+@-o-keyframes animateVin {
+  0% {
+    transform: none;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  50% {
+    transform: rotate(30deg);
+    margin-top: -70px;
+    margin-left: 70px;
+  }
+  100% {
+    transform: none;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+@-ms-keyframes animateVin {
+  0% {
+    transform: none;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  50% {
+    transform: rotate(30deg);
+    margin-top: -70px;
+    margin-left: 70px;
+  }
+  100% {
+    transform: none;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
 }
 @keyframes animateVin {
   0% {
@@ -528,6 +668,50 @@ img.vinodhaImg.opImg {
     transform: none;
     margin-top: 0px;
     margin-left: 0px;
+  }
+}
+@-webkit-keyframes animateAna {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-moz-keyframes animateAna {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-o-keyframes animateAna {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-ms-keyframes animateAna {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: none;
   }
 }
 @keyframes animateAna {
