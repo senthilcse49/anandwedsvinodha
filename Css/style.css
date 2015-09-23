@@ -752,3 +752,7 @@ img.vinodhaImg.opImg {
   background: url(polina.jpg) no-repeat;
   background-size: cover;
 }
+#story .storyImg {
+  width: 80%;
+  height: auto;
+}
