@@ -8,9 +8,15 @@
        var idElem = 0,delElem=0,tbElem="";
         var loc = window.location.href;
         var locArr = loc.split("#");
-        if(locArr.length > 1)
+        if(locArr.length > 1){
             loc = locArr[1];
-       fnLoadMenus(loc);
+            fnLoadMenus(loc);
+        }
+        else{
+            loc = "Home";
+            loadedMenu["Home"] =1;
+        }
+       
         
         $('footer.row.desktopMenu ul li').click(function(e){
             
