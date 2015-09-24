@@ -88,7 +88,8 @@ footer.desktopMenu ul li.current a{
     border-color:#ccc;/*rgba(255,0,0,0.5);*/
     @media screen and  (max-width: 767px){
         width:90%;
-        right:0%;    
+        right:5%;    
+        height:30%;
     }
 }
 
@@ -228,13 +229,17 @@ footer.desktopMenu ul li.current a{
 
 img.anandImg.opImg{
    .animate(animateAna 5s infinite);
-    
+    @media screen and  (max-width: 767px){
+        .animate(animateAnaSmall 5s infinite);
+    }
 }
 
 img.vinodhaImg.opImg{
     .animate(animateVin 5s infinite);
-    
+    @media screen and  (max-width: 767px){
+        .animate(animateVinSmall 5s infinite);
     }
+}
 
 @-webkit-keyframes animateVin{
     .animateVin
@@ -257,6 +262,27 @@ img.vinodhaImg.opImg{
 }
 
 
+@-webkit-keyframes animateVinSmall{
+    .animateVinSmall
+}
+
+@-moz-keyframes animateVinSmall{
+   .animateVinSmall
+}
+
+@-o-keyframes animateVinSmall{
+   .animateVinSmall
+}
+
+@-ms-keyframes animateVinSmall{
+   .animateVinSmall
+}
+
+@keyframes animateVinSmall{
+   .animateVinSmall
+}
+
+
 @-webkit-keyframes animateAna{
     .animateAna
 }
@@ -273,10 +299,29 @@ img.vinodhaImg.opImg{
     .animateAna
 }
 
+@-webkit-keyframes animateAnaSmall{
+    .animateAnaSmall
+}
+@-moz-keyframes animateAnaSmall{
+    .animateAnaSmall
+}
+@-o-keyframes animateAnaSmall{
+    .animateAnaSmall
+}
+@-ms-keyframes animateAnaSmall{
+    .animateAna
+}
+@keyframes animateAnaSmall{
+    .animateAnaSmall
+}
+
 .shortDetails{
     padding-top:20px;
     .wedDet{
         border-top:1px solid black;
+        @media screen and (max-width:767px){
+            font-size:80%;
+        }
     }
     .name{
         color:red;
@@ -300,7 +345,7 @@ img.vinodhaImg.opImg{
     z-index: 100;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(polina.jpg) no-repeat;
+    
     background-size: cover; 
 }
 
@@ -330,6 +375,11 @@ img.vinodhaImg.opImg{
         li{
             display:block;
             margin:2px;
+            &.current,&:hover {
+                a>label{
+                    color:red;
+                }
+            }
         }
     }
     &.menuOpen{

@@ -1,4 +1,4 @@
- <div class="row photosMenu content" id='photos'>
+ <div class="row photosMenu content page" id='photos'>
 <section class="row">
     <section class='col-lg-12 col-md-12 col-sm-12 col-xs-12 ' id='links'>
     
@@ -7,7 +7,7 @@
 </section>
 </div>
 
-<div id="blueimp-gallery" class="blueimp-gallery">
+<div id="blueimp-gallery" class="blueimp-gallery ">
     <!-- The container for the modal slides -->
     <div class="slides"></div>
     <!-- Controls for the borderless lightbox -->
@@ -45,5 +45,13 @@ for(var i=1;i<26;i++)
 {
     $('#links').append("<a href='AllPics/"+i+".jpg' data-gallery><img src='thumbnails/"+i+"_thumb.jpg'/></a>");
 }
-    blueimp.Gallery($('#links a'), $('#blueimp-gallery').data());
+    //blueimp.Gallery($('#links a'), $('#blueimp-gallery').data());
+    
+    blueimp.Gallery($('#links a'), {
+        
+        slideshowInterval: 2000,
+        carousel: true
+    });
+    
+    
 </script>

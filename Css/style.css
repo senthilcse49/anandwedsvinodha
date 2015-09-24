@@ -441,7 +441,8 @@ footer.desktopMenu ul li.current a {
 @media screen and (max-width: 767px) {
   .content {
     width: 90%;
-    right: 0%;
+    right: 5%;
+    height: 30%;
   }
 }
 .storyContent {
@@ -672,12 +673,30 @@ img.anandImg.opImg {
   -ms-animation: animateAna 5s infinite;
   animation: animateAna 5s infinite;
 }
+@media screen and (max-width: 767px) {
+  img.anandImg.opImg {
+    -webkit-animation: animateAnaSmall 5s infinite;
+    -moz-animation: animateAnaSmall 5s infinite;
+    -o-animation: animateAnaSmall 5s infinite;
+    -ms-animation: animateAnaSmall 5s infinite;
+    animation: animateAnaSmall 5s infinite;
+  }
+}
 img.vinodhaImg.opImg {
   -webkit-animation: animateVin 5s infinite;
   -moz-animation: animateVin 5s infinite;
   -o-animation: animateVin 5s infinite;
   -ms-animation: animateVin 5s infinite;
   animation: animateVin 5s infinite;
+}
+@media screen and (max-width: 767px) {
+  img.vinodhaImg.opImg {
+    -webkit-animation: animateVinSmall 5s infinite;
+    -moz-animation: animateVinSmall 5s infinite;
+    -o-animation: animateVinSmall 5s infinite;
+    -ms-animation: animateVinSmall 5s infinite;
+    animation: animateVinSmall 5s infinite;
+  }
 }
 @-webkit-keyframes animateVin {
   0% {
@@ -764,6 +783,91 @@ img.vinodhaImg.opImg {
     margin-left: 0px;
   }
 }
+@-webkit-keyframes animateVinSmall {
+  0% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+  50% {
+    transform: none;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  100% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+}
+@-moz-keyframes animateVinSmall {
+  0% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+  50% {
+    transform: none;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  100% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+}
+@-o-keyframes animateVinSmall {
+  0% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+  50% {
+    transform: none;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  100% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+}
+@-ms-keyframes animateVinSmall {
+  0% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+  50% {
+    transform: none;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  100% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+}
+@keyframes animateVinSmall {
+  0% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+  50% {
+    transform: none;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  100% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+}
 @-webkit-keyframes animateAna {
   0% {
     transform: none;
@@ -819,11 +923,79 @@ img.vinodhaImg.opImg {
     transform: none;
   }
 }
+@-webkit-keyframes animateAnaSmall {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-moz-keyframes animateAnaSmall {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-o-keyframes animateAnaSmall {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-ms-keyframes animateAnaSmall {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes animateAnaSmall {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform-origin: 50% 50%;
+    transform: scale(1.5, 1.5);
+    filter: blur(2px);
+  }
+  100% {
+    transform: none;
+  }
+}
 .shortDetails {
   padding-top: 20px;
 }
 .shortDetails .wedDet {
   border-top: 1px solid black;
+}
+@media screen and (max-width: 767px) {
+  .shortDetails .wedDet {
+    font-size: 80%;
+  }
 }
 .shortDetails .name {
   color: red;
@@ -843,7 +1015,6 @@ img.vinodhaImg.opImg {
   z-index: 100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url(polina.jpg) no-repeat;
   background-size: cover;
 }
 #story .storyImg {
@@ -869,6 +1040,10 @@ img.vinodhaImg.opImg {
 .mobileMenu ul li {
   display: block;
   margin: 2px;
+}
+.mobileMenu ul li.current a > label,
+.mobileMenu ul li:hover a > label {
+  color: red;
 }
 .mobileMenu.menuOpen .mobileCurrMenu {
   display: none;
