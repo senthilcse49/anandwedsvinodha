@@ -9,7 +9,7 @@
     <link href="Css/style.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
         <link href="Css/image_gallery.css" rel="stylesheet" type="text/css"/>
-        <link href="Css/story.css" rel="stylesheet" type="text/css"/>
+        
  </head>
 <body>
     <section class='background-img'>
@@ -20,9 +20,10 @@
         
     </section>
     <section class='container-fluid' >    
-    <footer class='row '>
+    <footer class='row hidden-xs desktopMenu'>
         
-        <nav class="hidden-xs col-lg-12 text-center">
+        <nav class="col-lg-12 col-md-12 col-sm-12 text-center ">
+            
             <ul>
                 <li class="read current">
                   <a href="#Home"> <i class="fa fa-heart "></i>  <label >Home</label></a>
@@ -47,6 +48,35 @@
         </nav>
             
     </footer>
+        
+         <footer class='row mobileMenu hidden-lg hidden-md hidden-sm menuOpen'>
+        
+        <nav class="col-xs-12 ">
+            <i class="fa fa-bars" ></i><label class='mobileCurrMenu'>Home</label>
+            <ul>
+                <li class="read current">
+                  <a href="#Home"> <label >Home</label></a>
+                </li>
+                <li class="">
+                  <a href="#Story"> <label >Our Story</label></a>
+                </li>
+                
+                <li class="">
+                  <a href="#Photos" >  <label >Photos</label></a>
+                </li>
+                <li class="">
+                  <a href="#Videos" >  <label >Videos</label></a>
+                </li>
+                <li class="">
+                  <a href="#event" >   <label >Event</label></a>
+                </li>
+                <li class="">
+                  <a href="#contactus" >  <label >Contactus</label></a>
+                </li>
+            </ul>
+        </nav>
+            
+    </footer>
         </section>
         </section>
     
@@ -64,11 +94,13 @@
     
     
     <section class='modal fade' id="anandDesc" role="dialog">
-                    <section class="modal-dialog modal-md">
+                    <section class="modal-dialog modal-lg">
     
       <!-- Modal content-->
                                 <section class="modal-content">
-        
+                                <section class="modal-header">
+                                    
+                                    </section>
                                 <section class="modal-body">
                                     <img src="images/AboutGroom.jpg" width="100%" height="100%">
                                 </section>
@@ -85,7 +117,9 @@
     
       <!-- Modal content-->
                                 <section class="modal-content">
-        
+                                <section class="modal-header">
+                                    
+                                    </section>
                                 <section class="modal-body">
                                     <img src="images/AboutBride.jpg" width="100%" height="100%">
                                 </section>

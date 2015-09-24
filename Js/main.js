@@ -12,28 +12,28 @@
             loc = locArr[1];
        fnLoadMenus(loc);
         
-        $('footer.row ul li').click(function(e){
+        $('footer.row.desktopMenu ul li').click(function(e){
             
-            $('footer.row ul li').removeClass("current read");
+            $('footer.row.desktopMenu ul li').removeClass("current read");
             var menus = $(this).find('a').attr("href");
             fnLoadMenus(menus);
             $(this).addClass("current");
-            $('footer.row ul li').find("i").removeClass("fa-heart");
-            $('footer.row ul li').find("i").addClass("fa-heart-o");
+            $('footer.row.desktopMenu ul li').find("i").removeClass("fa-heart");
+            $('footer.row.desktopMenu ul li').find("i").addClass("fa-heart-o");
             $(this).find("i").addClass("fa-heart");
             $(this).find("i").removeClass("fa-heart-o");
             fnLoadMenus();
             e.stopPropagation();
         });
         
-        $('footer.row ul li').mouseover(function(e){
+        $('footer.row.desktopMenu ul li').mouseover(function(e){
            
            
             $(this).find("i").removeClass("fa-heart-o");
            $(this).find("i").addClass("fa-heart");
         });
         
-        $('footer.row ul li').mouseout(function(e){
+        $('footer.row.desktopMenu ul li').mouseout(function(e){
            if(!$(this).hasClass("current")){
                $(this).find("i").removeClass("fa-heart");
             $(this).find("i").addClass("fa-heart-o");

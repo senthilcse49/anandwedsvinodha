@@ -35,7 +35,7 @@ a{
     position:fixed;
 }
 
-footer{
+footer.desktopMenu{
     position:absolute;
     top:10px;
     left:0px;
@@ -44,27 +44,35 @@ footer{
     z-index:120;
 }
 
-footer ul{
+footer.desktopMenu ul{
     list-style: none;
 }
-footer ul li{
+footer.desktopMenu ul li{
     display: inline-block;
     font-size: 110%;
     margin-left:5%;
 }
-footer ul li.current a{
+footer.desktopMenu ul li.current a{
     color:red;
 }
 
 #links img{
-    width:10%;
-    height:10%;
+    width:100px;
+    height:100px;
     border-radius:5%;
-    padding:2px;
+    padding:1px;
     border:1px solid white;
 }
 
-
+.modal-content{
+    background-color:rgba(255,255,255,0.3);
+    .modal-header{
+        border:none;
+    }
+    .modal-footer{
+        border:none;
+    }
+}
 
 .content{
     height:40%;
@@ -78,7 +86,10 @@ footer ul li.current a{
     
     border:1px solid red;
     border-color:#ccc;/*rgba(255,0,0,0.5);*/
-    
+    @media screen and  (max-width: 767px){
+        width:90%;
+        right:0%;    
+    }
 }
 
 .storyContent{
@@ -150,7 +161,7 @@ footer ul li.current a{
         height:100%;
         width:auto;
         
-        .transition(transform 3s,margin 3s;);
+        
     }
     
     .desc{
@@ -178,6 +189,43 @@ footer ul li.current a{
     margin-top:10%;
     color:@base-font-color;
 }
+
+.storyMenu{
+   
+    height:60%;
+    top:15%;
+    right:2%;
+    
+    width:  90%;
+    position:absolute;
+}
+
+#story img.animate{
+    
+    .animate(storyAnimation 2s);
+}
+
+
+@-webkit-keyframes storyAnimation{
+    .storyAnimation
+}
+
+@-moz-keyframes storyAnimation{
+   .storyAnimation
+}
+
+@-o-keyframes storyAnimation{
+   .storyAnimation
+}
+
+@-ms-keyframes storyAnimation{
+   .storyAnimation
+}
+
+@keyframes storyAnimation{
+   .storyAnimation
+}
+
 img.anandImg.opImg{
    .animate(animateAna 5s infinite);
     
@@ -259,4 +307,37 @@ img.vinodhaImg.opImg{
 #story .storyImg{
     width:80%;
     height:auto;
+}
+
+
+.mobileMenu{
+    
+    position:absolute;
+    top:10px;
+    left:0px;
+    height:20px;
+    width:100%;
+    z-index:120;
+
+    i {
+        padding:0px  5px;
+    }
+    ul{
+        display:none;   
+        list-style: none;
+        padding:0px 15px;
+        
+        li{
+            display:block;
+            margin:2px;
+        }
+    }
+    &.menuOpen{
+        .mobileCurrMenu{
+            display:none;
+        }
+        ul{
+            display:block;
+        }
+    }
 }

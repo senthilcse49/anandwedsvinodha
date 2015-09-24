@@ -1,6 +1,6 @@
  <section class="row storyMenu content" id='story'>
 
-    <section class='col-lg-10 col-md-10 col-sm-10 col-xs-10 text-center'>
+    <section class='col-lg-10 col-md-10 col-sm-10 col-xs-12 text-center'>
    
             <img src='images/story1.png'  class="storyImg animate">
     </section>
@@ -9,8 +9,10 @@
 
 <script>
     var stroryNo = 1;
+setTimeout(function(){
+        $('.storyImg').removeClass("animate");},1000);
     window.setInterval(function(){
-        $('.storyImg').removeClass("animate");
+        
         //alert($('.storyImg').attr("class"))
         stroryNo++;
         if(stroryNo > 11)
@@ -18,6 +20,9 @@
         
         $('.storyImg').attr("src","images/story"+stroryNo+".png");
         $('.storyImg').addClass("animate");
+        setTimeout(function(){
+        $('.storyImg').removeClass("animate");},1000);
+        
     },5000);
 
 </script>
