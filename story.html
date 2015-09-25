@@ -1,14 +1,19 @@
  <section class="row storyMenu content page" id='story'>
 
-    <section class='col-lg-10 col-md-10 col-sm-10 col-xs-12 text-center'>
+    <section class="col-lg-8 col-md-8 col-sm-8 col-xs-12 pull-right storySection">
    
-            <img src='images/story1.png'  class="storyImg animate">
+            <img src="images/story1.png" class="storyImg pull-right animate">
     </section>
 
 </section>
 
 <script>
     var stroryNo = 1;
+    if(mobilecheck()){
+        
+        $('.storySection').removeClass("pull-right");
+        $('.storyImg').removeClass("pull-right");
+    }
 setTimeout(function(){
         $('.storyImg').removeClass("animate");},1000);  
     window.setInterval(function(){

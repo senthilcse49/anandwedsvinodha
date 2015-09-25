@@ -382,7 +382,13 @@ a {
   background: rgba(255, 255, 255, 0.4);
   height: 100vh;
 }
-.background-img {
+@media screen and (max-width: 767px) {
+  .container-fluid {
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+.background-img,
+.contactusBck {
   width: 100%;
   width: 100vw;
   height: 100vh;
@@ -390,6 +396,11 @@ a {
   background-size: 100% 100%;
   background-position: 100% 100%;
   position: fixed;
+}
+.contactusBck {
+  position: absolute;
+  background-image: url('../images/contactus.png');
+  display: none;
 }
 footer.desktopMenu {
   position: absolute;
@@ -450,6 +461,24 @@ footer.desktopMenu ul li.current a {
     right: 5%;
     height: 30%;
   }
+}
+#contactus {
+  right: 0%;
+  z-index: 100;
+  top: 30%;
+}
+@media screen and (max-width: 767px) {
+  #contactus {
+    font-weight: bold;
+    top: 30%;
+  }
+}
+#events {
+  top: 10%;
+  right: 0%;
+}
+#events p {
+  margin-bottom: 30px;
 }
 .storyContent {
   width: 90%;
