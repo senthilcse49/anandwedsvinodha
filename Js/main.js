@@ -118,7 +118,7 @@ function fnLoadMenus(loc){
     
         if(!loadedMenu[menu]){
             loadedMenu[menu] = 1;
-            $.get(menu+".html", function(data){
+            $.get(menu+".html?a=1", function(data){
                 $('.page').hide();
                 
             
