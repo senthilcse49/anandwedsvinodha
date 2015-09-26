@@ -114,6 +114,8 @@ function fnLoadMenus(loc){
     else{
         videoOn();
     }
+    
+    
         if(!loadedMenu[menu]){
             loadedMenu[menu] = 1;
             $.get(menu+".html", function(data){
@@ -138,6 +140,30 @@ function fnLoadMenus(loc){
         }    
     
         else{
+            if(menu == "home"){
+                if($('#home').length == 0){
+                 loadedMenu[home] = 0;
+                  fnLoadMenus(menu);
+                    return;
+                }
+            }
+            if(menu == "story"){
+                if(timeOutInterval)
+                    clearInterval(timeOutInterval);
+                $('.storyImg').attr("src","images/story1.png");
+                stroryNo = 1;
+                $('.storyImg').addClass("animate");
+                clearTimeout(clearTime);
+                startStorySlide();
+            }
+            if(menu == "photos"){
+                  blueimp.Gallery($('#links a'), {
+        
+                        slideshowInterval: 2000,
+                        carousel: true
+                    });
+    
+            }
             $('.page').hide();
             $('#'+menu).show();
         }

@@ -8,13 +8,14 @@
 </section>
 
 <script>
-    var stroryNo = 1;
+    var stroryNo = 1,timeOutInterval,clearTime;
     if(mobilecheck()){
         
         $('.storySection').removeClass("pull-right");
         $('.storyImg').removeClass("pull-right");
     }
-setTimeout(function(){
+    function startStorySlide(){
+timeOutInterval = setTimeout(function(){
         $('.storyImg').removeClass("animate");},1000);  
     window.setInterval(function(){
         
@@ -25,9 +26,11 @@ setTimeout(function(){
         
         $('.storyImg').attr("src","images/story"+stroryNo+".png");
         $('.storyImg').addClass("animate");
-        setTimeout(function(){
+        clearTime= setTimeout(function(){
         $('.storyImg').removeClass("animate");},1000);
         
-    },5000);
+    },6000);
+    }
+    startStorySlide();
 
 </script>
