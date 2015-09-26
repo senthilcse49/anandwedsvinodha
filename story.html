@@ -8,14 +8,14 @@
 </section>
 
 <script>
-    var stroryNo = 1,timeOutInterval,clearTime;
+    
     if(mobilecheck()){
         
         $('.storySection').removeClass("pull-right");
         $('.storyImg').removeClass("pull-right");
     }
     function startStorySlide(){
-timeOutInterval = setTimeout(function(){
+timeStoryOutInterval = setTimeout(function(){
         $('.storyImg').removeClass("animate");},1000);  
     window.setInterval(function(){
         
@@ -26,7 +26,7 @@ timeOutInterval = setTimeout(function(){
         
         $('.storyImg').attr("src","images/story"+stroryNo+".png");
         $('.storyImg').addClass("animate");
-        clearTime= setTimeout(function(){
+        clearTimeStory= setTimeout(function(){
         $('.storyImg').removeClass("animate");},1000);
         
     },6000);

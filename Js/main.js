@@ -109,11 +109,7 @@ function fnLoadMenus(loc){
         $('.desktopMenu li.'+menu+"Li").addClass("current").find("i").removeClass("fa-heart-o").addClass("fa-heart");
     
         changeMenuMob(menu,loc);
-    if(menu != "videos")
-        videoOff();
-    else{
-        videoOn();
-    }
+    
     
     
         if(!loadedMenu[menu]){
@@ -140,6 +136,11 @@ function fnLoadMenus(loc){
         }    
     
         else{
+            if(menu != "videos")
+        videoOff();
+    else{
+        videoOn();
+    }
             if(menu == "home"){
                 if($('#home').length == 0){
                  loadedMenu[home] = 0;
@@ -148,12 +149,12 @@ function fnLoadMenus(loc){
                 }
             }
             if(menu == "story"){
-                if(timeOutInterval)
-                    clearInterval(timeOutInterval);
+                if(timeStoryOutInterval)
+                    clearInterval(timeStoryOutInterval);
                 $('.storyImg').attr("src","images/story1.png");
                 stroryNo = 1;
                 $('.storyImg').addClass("animate");
-                clearTimeout(clearTime);
+                clearTimeout(clearTimeStory);
                 startStorySlide();
             }
             if(menu == "photos"){
@@ -186,8 +187,13 @@ function videoOff(){
 }
 function videoOn(){
     if(videoRm){
-        $('#videos').html('<object id="bgvid"/>')
-        $('#bgvid').attr("data","https://www.youtube.com/v/SQiZM6N1vNA?autoplay=1&controls=0&loop=1&playlist=SQiZM6N1vNA");
+        if(mobilecheck()){
+             $('#videos').html("<section class='row'><section class='col-xs-12'><video autoplay id='bgvid'><source src='story.mp4' type='video/mp4'></video></section></section>");
+        }
+        else{
+            $('#videos').html('<object id="bgvid"/>')
+            $('#bgvid').attr("data","https://www.youtube.com/v/SQiZM6N1vNA?autoplay=1&controls=0&loop=1&playlist=SQiZM6N1vNA");
+            }
     }
 }
 

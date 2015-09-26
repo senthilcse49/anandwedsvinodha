@@ -28,12 +28,12 @@
                 <div class="modal-body next"></div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default pull-left prev">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        <i class="fa fa-chevron-left"></i>
                         Previous
                     </button>
                     <button type="button" class="btn btn-primary next">
                         Next
-                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i class="fa fa-chevron-right"></i>
                     </button>
                 </div>
             </div>
@@ -43,7 +43,11 @@
 <script type="text/javascript">
 for(var i=1;i<26;i++)
 {
-    $('#links').append("<a href='AllPics/"+i+".jpg' data-gallery><img src='thumbnails/"+i+"_thumb.jpg'/></a>");
+    if(mobilecheck()){
+        $('#links').append("<a href='AllPics/"+i+"_mob.jpg' data-gallery><img src='thumbnails/"+i+"_thumb.jpg'/></a>");
+    }
+    else
+        $('#links').append("<a href='AllPics/"+i+".jpg' data-gallery><img src='thumbnails/"+i+"_thumb.jpg'/></a>");
 }
     //blueimp.Gallery($('#links a'), $('#blueimp-gallery').data());
     
